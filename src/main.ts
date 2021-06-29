@@ -7,6 +7,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DemoMaterialModule } from './app/material-module';
 import { GweComponent } from './app/gwe/gwe.component';
+import { DragndropComponent } from './app/dragndrop/dragndrop.component';
 
 import { FormFieldAppearanceExample } from './app/form-field-appearance-example';
 
@@ -21,8 +22,8 @@ import { FormFieldAppearanceExample } from './app/form-field-appearance-example'
     ReactiveFormsModule
   ],
   entryComponents: [FormFieldAppearanceExample],
-  declarations: [FormFieldAppearanceExample, GweComponent],
-  bootstrap: [FormFieldAppearanceExample, GweComponent]
+  declarations: [FormFieldAppearanceExample, GweComponent, DragndropComponent],
+  bootstrap: [FormFieldAppearanceExample, GweComponent, DragndropComponent]
 })
 export class AppModule {}
 
