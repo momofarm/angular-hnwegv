@@ -1,3 +1,2 @@
 # angular-mid5k6
-
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-mid5k6)
+This shit is experiental, dont use it
