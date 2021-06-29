@@ -21,8 +21,8 @@ import { FormFieldAppearanceExample } from './app/form-field-appearance-example'
     ReactiveFormsModule
   ],
   entryComponents: [FormFieldAppearanceExample],
-  declarations: [FormFieldAppearanceExample],
-  bootstrap: [FormFieldAppearanceExample]
+  declarations: [FormFieldAppearanceExample, GweComponent],
+  bootstrap: [FormFieldAppearanceExample, GweComponent]
 })
 export class AppModule {}
 
