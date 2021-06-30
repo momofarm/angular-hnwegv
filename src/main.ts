@@ -1,13 +1,15 @@
-import {HttpClientModule} from '@angular/common/http';
-import {NgModule} from '@angular/core';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatNativeDateModule} from '@angular/material/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {DemoMaterialModule} from './app/material-module';
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatNativeDateModule } from '@angular/material/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DemoMaterialModule } from './app/material-module';
+import { GweComponent } from './app/gwe/gwe.component';
+import { DragndropComponent } from './app/dragndrop/dragndrop.component';
 
-import {FormFieldAppearanceExample} from './app/form-field-appearance-example';
+import { FormFieldAppearanceExample } from './app/form-field-appearance-example';
 
 @NgModule({
   imports: [
@@ -17,17 +19,17 @@ import {FormFieldAppearanceExample} from './app/form-field-appearance-example';
     HttpClientModule,
     DemoMaterialModule,
     MatNativeDateModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   entryComponents: [FormFieldAppearanceExample],
-  declarations: [FormFieldAppearanceExample],
-  bootstrap: [FormFieldAppearanceExample]
+  declarations: [FormFieldAppearanceExample, GweComponent, DragndropComponent],
+  bootstrap: [FormFieldAppearanceExample, GweComponent, DragndropComponent]
 })
 export class AppModule {}
 
-platformBrowserDynamic().bootstrapModule(AppModule)
+platformBrowserDynamic()
+  .bootstrapModule(AppModule)
   .catch(err => console.error(err));
-
 
 /**  Copyright 2021 Google LLC. All Rights Reserved.
     Use of this source code is governed by an MIT-style license that
