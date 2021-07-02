@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { movies } from '../movies';
 
 @Component({
   selector: 'app-dragndrop',
@@ -7,6 +8,9 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
   styleUrls: ['./dragndrop.component.css']
 })
 export class DragndropComponent implements OnInit {
+  constructor() {}
+  films = movies;
+  /* 
   movies = [
     'Episode I - The Phantom Menace',
     'Episode II - Attack of the Clones',
@@ -18,10 +22,16 @@ export class DragndropComponent implements OnInit {
     'Episode VIII - The Last Jedi',
     'Episode IX – The Rise of Skywalker'
   ];
-  constructor() {}
-
+  */
   ngOnInit() {}
   drop(event: CdkDragDrop<string[]>) {
-    moveItemInArray(this.movies, event.previousIndex, event.currentIndex);
+    moveItemInArray(movies, event.previousIndex, event.currentIndex);
+  }
+
+  addItem(value: string) {
+    console.log('AppModule add item');
+    let s: string = value[0] + ' ' + value[1] + ' ' + value[2] + ' ' + value[3];
+    movies.push(s);
+    // this.movies.push(s);
   }
 }
