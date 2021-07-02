@@ -6,6 +6,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
   templateUrl: 'form-field-appearance-example.html'
 })
 export class FormFieldAppearanceExample {
+  
   addItem(value: string[]) {
     console.log('AppModule add item');
     let s: string = value[0] + ' ' + value[1] + ' ' + value[2] + ' ' + value[3];
