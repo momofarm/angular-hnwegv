@@ -25,7 +25,14 @@ import { FormFieldAppearanceExample } from './app/form-field-appearance-example'
   declarations: [FormFieldAppearanceExample, GweComponent, DragndropComponent],
   bootstrap: [FormFieldAppearanceExample, GweComponent, DragndropComponent]
 })
-export class AppModule {}
+export class AppModule {
+  addItem(value: string[]) {
+    console.log('AppModule add item');
+    let s: string = value[0] + ' ' + value[1] + ' ' + value[2] + ' ' + value[3];
+    //this.eventAddItem2.emit(value);
+    // this.movies.push(s);
+  }
+}
 
 platformBrowserDynamic()
   .bootstrapModule(AppModule)
