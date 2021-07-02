@@ -6,12 +6,11 @@ import { Component, Output, EventEmitter } from '@angular/core';
   templateUrl: 'form-field-appearance-example.html'
 })
 export class FormFieldAppearanceExample {
-  @Output() eventAddItem = new EventEmitter<string[]>();
-
-  addItem(weight: string, length: string, width: string, height: string) {
-    console.log('form field add item pressed');
-    let temp: string[] = [weight, length, width, height];
-    this.eventAddItem.emit(temp);
+  addItem(value: string[]) {
+    console.log('AppModule add item');
+    let s: string = value[0] + ' ' + value[1] + ' ' + value[2] + ' ' + value[3];
+    //this.eventAddItem2.emit(value);
+    // this.movies.push(s);
   }
 }
 

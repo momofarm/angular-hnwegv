@@ -1,51 +1,14 @@
-<p>
-<mat-divider>Test</mat-divider>
-<mat-divider inset vertical></mat-divider>
-</p>
-<p>
-<mat-form-field appearance="legacy">
-  <mat-label>Weight</mat-label>
-  <input matInput placeholder="Placeholder" #weight />
-  <mat-hint>Hint</mat-hint>
-</mat-form-field>
-</p>
+
+<app-input-form (eventAddItem)="addItem($event)"></app-input-form>
+
 
 <p>
-<mat-form-field appearance="legacy">
-  <mat-label>length</mat-label>
-  <input matInput placeholder="Placeholder" #length />
-  <mat-hint>Hint</mat-hint>
-</mat-form-field>
+  <mat-divider>Test</mat-divider>
+  <mat-divider inset vertical></mat-divider>
 </p>
 
-<p>
-<mat-form-field appearance="legacy">
-  <mat-label>Width</mat-label>
-  <input matInput placeholder="Placeholder" #width />
-  <mat-hint>Hint</mat-hint>
-</mat-form-field>
-</p>
 
-<p>
-<mat-form-field appearance="legacy">
-  <mat-label>Height</mat-label>
-  <input matInput placeholder="Placeholder" #height />
-  <mat-hint>Hint</mat-hint>
-</mat-form-field>
-</p>
-
-<button
-mat-raised-button
-color="primary"
-(click)="addItem(weight.value, length.value, width.value, height.value)"
->
-Add Item
-</button>
-
-<p>
-<mat-divider>Test</mat-divider>
-<mat-divider inset vertical></mat-divider>
-</p>
+<app-dragndrop>dragdrop tes</app-dragndrop>
 
 <!-- Copyright 2021 Google LLC. All Rights Reserved.
   Use of this source code is governed by an MIT-style license that

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-dragndrop',
