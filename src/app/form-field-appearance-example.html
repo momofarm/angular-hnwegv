@@ -1,49 +1,52 @@
 <p>
-  <mat-divider>Test</mat-divider>
-  <mat-divider inset vertical></mat-divider>
+<mat-divider>Test</mat-divider>
+<mat-divider inset vertical></mat-divider>
 </p>
 <p>
-  <mat-form-field appearance="legacy">
-    <mat-label>Weight</mat-label>
-    <input matInput placeholder="Placeholder">
-    <mat-hint>Hint</mat-hint>
-  </mat-form-field>
-</p>
-
-<p>
-  <mat-form-field appearance="legacy">
-    <mat-label>length</mat-label>
-    <input matInput placeholder="Placeholder">
-    <mat-hint>Hint</mat-hint>
-  </mat-form-field>
+<mat-form-field appearance="legacy">
+  <mat-label>Weight</mat-label>
+  <input matInput placeholder="Placeholder" #weight />
+  <mat-hint>Hint</mat-hint>
+</mat-form-field>
 </p>
 
 <p>
-  <mat-form-field appearance="legacy">
-    <mat-label>Width</mat-label>
-    <input matInput placeholder="Placeholder">
-    <mat-hint>Hint</mat-hint>
-  </mat-form-field>
+<mat-form-field appearance="legacy">
+  <mat-label>length</mat-label>
+  <input matInput placeholder="Placeholder" #length />
+  <mat-hint>Hint</mat-hint>
+</mat-form-field>
 </p>
 
 <p>
-  <mat-form-field appearance="legacy">
-    <mat-label>Height</mat-label>
-    <input matInput placeholder="Placeholder">
-    <mat-hint>Hint</mat-hint>
-  </mat-form-field>
+<mat-form-field appearance="legacy">
+  <mat-label>Width</mat-label>
+  <input matInput placeholder="Placeholder" #width />
+  <mat-hint>Hint</mat-hint>
+</mat-form-field>
 </p>
-
-<button mat-raised-button color="primary"> Add Item</button>
-
 
 <p>
-  <mat-divider>Test</mat-divider>
-  <mat-divider inset vertical></mat-divider>
+<mat-form-field appearance="legacy">
+  <mat-label>Height</mat-label>
+  <input matInput placeholder="Placeholder" #height />
+  <mat-hint>Hint</mat-hint>
+</mat-form-field>
 </p>
 
+<button
+mat-raised-button
+color="primary"
+(click)="addItem(weight.value, length.value, width.value, height.value)"
+>
+Add Item
+</button>
 
+<p>
+<mat-divider>Test</mat-divider>
+<mat-divider inset vertical></mat-divider>
+</p>
 
 <!-- Copyright 2021 Google LLC. All Rights Reserved.
-    Use of this source code is governed by an MIT-style license that
-    can be found in the LICENSE file at http://angular.io/license -->
+  Use of this source code is governed by an MIT-style license that
+  can be found in the LICENSE file at http://angular.io/license -->
